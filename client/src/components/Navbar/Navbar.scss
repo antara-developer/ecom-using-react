@@ -1,0 +1,48 @@
+.navbar-header{
+    height: 80px;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .item{
+            margin: 1rem;
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+
+        }
+        .center{
+            font-size: larger;
+            font-weight: bolder;
+            align-items: center;
+        }
+        .right{
+            display: flex;
+        }
+
+        .cartItem{
+            margin-top: 1rem;
+            color: #777;
+            position: relative;
+            cursor: pointer;
+            span{
+                background-color: rgb(40, 122, 210);
+                font-size: 12px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                top: -0.5rem;
+                right: -0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
