@@ -16,8 +16,8 @@ const FeaturedProducts = ({ type }) => {
         },
         {
             id: 2,
-            img1: "https://images.pexels.com/photos/3689149/pexels-photo-3689149.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            img2: "https://images.pexels.com/photos/3689148/pexels-photo-3689148.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img1: "https://images.pexels.com/photos/3689148/pexels-photo-3689148.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img2: "https://images.pexels.com/photos/3689149/pexels-photo-3689149.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
             title: "Brown Checked Jacket",
             isNew: true,
             oldPrice: 29,
@@ -25,8 +25,8 @@ const FeaturedProducts = ({ type }) => {
         },
         {
             id: 3,
-            img1: "https://images.pexels.com/photos/1024036/pexels-photo-1024036.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            img2: "https://images.pexels.com/photos/1024033/pexels-photo-1024033.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img1: "https://images.pexels.com/photos/1024033/pexels-photo-1024033.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img2: "https://images.pexels.com/photos/1024036/pexels-photo-1024036.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
             title: "Yellow Summer Dress",
             isNew: false,
             oldPrice: 59,
@@ -34,8 +34,8 @@ const FeaturedProducts = ({ type }) => {
         },
         {
             id: 4,
-            img1: "https://images.pexels.com/photos/13709921/pexels-photo-13709921.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-            img2: "https://images.pexels.com/photos/13709916/pexels-photo-13709916.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img1: "https://images.pexels.com/photos/13709916/pexels-photo-13709916.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+            img2: "https://images.pexels.com/photos/13709921/pexels-photo-13709921.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
             title: "Disco Pink 2 Piece Set",
             isNew: false,
             oldPrice: 40,
