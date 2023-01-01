@@ -1,21 +1,24 @@
-.carousel{
-    position: relative;
-    .control-icons{
-        display: flex;
-        justify-content: center;
-        .carousel-control-prev{
-            .leftIcon{
-                position: absolute;
-                left: 35rem;
-                bottom: 0.5rem;
-                
+.slider{
+    padding-top: 1rem;
+    .carousel{
+        position: relative;
+        .control-icons{
+            display: flex;
+            justify-content: center;
+            .carousel-control-prev{
+                .leftIcon{
+                    position: absolute;
+                    left: 35rem;
+                    bottom: 0.5rem;
+                    
+                }
             }
-        }
-        .carousel-control-next{
-            .rightIcon{
-                position: absolute;
-                right: 35rem;
-                bottom: 0.5rem;
+            .carousel-control-next{
+                .rightIcon{
+                    position: absolute;
+                    right: 35rem;
+                    bottom: 0.5rem;
+                }
             }
         }
     }

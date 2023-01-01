@@ -1,10 +1,13 @@
-import React from 'react';
-import SearchIcon from '@mui/icons-material/Search';
+import React, { useState } from 'react';
 import ShoppingCartIconOutlined from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import Cart from '../Cart/Cart';
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <div className='navbar-header'>
             <div className="wrapper">
@@ -32,12 +35,13 @@ const Navbar = () => {
                     <div className="item">
                         <Link className="link" to='/'>Contact us!</Link>
                     </div>
-                    <div className="cartItem">
+                    <div className="cartItem" onClick={()=>setOpen(!open)}>
                         <ShoppingCartIconOutlined/>
                         <span>0</span>
                     </div>
                 </div>
             </div>
+            {open && <Cart/>}
         </div>
     )
 }
