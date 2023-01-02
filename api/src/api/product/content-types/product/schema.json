@@ -66,6 +66,9 @@
         "featured products",
         "trending products"
       ]
+    },
+    "vendor": {
+      "type": "string"
     }
   }
 }

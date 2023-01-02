@@ -1,6 +1,8 @@
+@import "../../scss/globals.scss";
+
 .footer{
     padding: 1.5rem;
-    background-color: rgb(246 246 246);
+    background-color: $secondary-color;
     .footer-wrapper-1{
         .footer-item{
             text-align: justify;
@@ -23,10 +25,10 @@
             justify-content: center;
             
             .logo{
-                color: rgb(40, 122, 210);
-                font-size: larger;
-                font-weight: bolder;
-                margin: 0.5rem;
+                img{
+                    width: 5rem;
+                    object-fit: contain;
+                }
             }
             
             .footer-content{

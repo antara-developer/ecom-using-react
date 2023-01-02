@@ -44,7 +44,7 @@ const Footer = () => {
                     <p className="footer-content">This web site is directed only to U.K. consumers for products and services of Unilever United Kingdom. This web site is not directed to consumers outside of the U.K.</p>
                 </div>
                 <div className="footer-down-item col-md-6">
-                    <div className="logo">SGS</div>
+                    <div className="logo"><img src={process.env.PUBLIC_URL + "/images/logo-1.png"} alt="" /></div>
                     <div className="footer-content">&copy; Copyright 2023. All Rights Reserved</div>
                 </div>
             </div>

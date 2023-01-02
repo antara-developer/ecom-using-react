@@ -1,13 +1,20 @@
+@import "../../scss/globals.scss";
+
 .navbar-header{
-    height: 80px;
+    height: 5rem;
+    position: sticky;
+    top: 0px;
+    padding: 0 2.5rem 3rem 2.5rem;
+    background-color: $primary-color;
+    z-index: 10;
 
     .wrapper{
-        padding: 10px 30px;
         display: flex;
         justify-content: space-between;
-
+        
         .item{
             margin: 1rem;
+            color: white;
         }
 
         .left{
@@ -16,12 +23,14 @@
 
         }
         .center{
-            font-size: larger;
-            font-weight: bolder;
-            align-items: center;
+            img{
+                width: 5rem;
+                object-fit: contain;
+            }
         }
         .right{
             display: flex;
+            align-items: center;
         }
 
         .cartItem{
@@ -42,6 +51,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .cart-icon{
+                color: white;
             }
         }
     }

@@ -1,3 +1,5 @@
+@import "../../scss/globals.scss";
+
 .featuredProducts{
     padding: 3rem;
     .top{
@@ -8,17 +10,19 @@
         h3{
             flex: 2;
             font-weight: bolder;
+            text-transform: capitalize;
         }
 
         p{
             flex: 3;
-            color: #777;
+            color: $color-3;
             font-size: small;
         }
     }
 
     .bottom{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 3rem;

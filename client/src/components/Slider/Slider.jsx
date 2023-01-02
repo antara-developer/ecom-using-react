@@ -10,13 +10,13 @@ const Slider = () => {
             <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="5000">
-                        <img src="https://i.ibb.co/vjnBC7W/banner-img-1.png" className="d-block w-100" alt="..." />
+                        <img src={process.env.PUBLIC_URL + "/images/banner-img-1.png"} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item" data-bs-interval="5000">
-                        <img src="https://i.ibb.co/qWZX2jy/banner-img-2.png" className="d-block w-100" alt="..." />
+                        <img src={process.env.PUBLIC_URL + "/images/banner-img-2.png"} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item" data-bs-interval="5000" >
-                        <img src="https://i.ibb.co/hC9XHT7/banner-img-3.png" className="d-block w-100" alt="..." />
+                        <img src={process.env.PUBLIC_URL + "/images/banner-img-3.png"} className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <div className="control-icons">
