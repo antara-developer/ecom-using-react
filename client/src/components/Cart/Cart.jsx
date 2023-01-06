@@ -24,7 +24,7 @@ const Cart = () => {
                     <div className="details">
                         <h1>{item.title}</h1>
                         <p>{item.desc?.substring(0, 100)}</p>
-                        <div className="price">{item.quantity} x {item.price}</div>
+                        <div className="price">{item.quantity} x ${item.price}</div>
                     </div>
                     <DeleteOutlineIcon className='delete' onClick={() => dispatch(removeItem(item.id))}/>
                 </div>

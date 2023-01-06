@@ -9,7 +9,7 @@ const Products = () => {
 
     const catId = parseInt(useParams().id);
     const [maxPrice, setMaxPrice] = useState(1000);
-    const [sort, setSort] = useState("asc");
+    const [sort, setSort] = useState("");
     const [selectedSubCats, setSelectedSubCats] = useState([]);
 
     const { data, loading, error } = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
@@ -25,7 +25,6 @@ const Products = () => {
         );
     };
 
-    console.log(selectedSubCats)
     return (
         <div className='products'>
             {error ? "Something went wrong!" : loading ? "loading" :
@@ -55,14 +54,15 @@ const Products = () => {
                         <div className="filter-item">
                             <h2>Sort by</h2>
                             <div className="input-item">
-                                <input type="radio" id='asc' value='asc' name='price' onChange={(e) => setSort("asc")} />
+                                <input type="radio" id='asc' value="asc" name='price' onClick={(e) => setSort("asc")} />
                                 <label htmlFor="asc">Price (Low to High)</label>
                             </div>
                             <div className="input-item">
-                                <input type="radio" id='desc' value='desc' name='price' onChange={(e) => setSort("desc")} />
+                                <input type="radio" id='desc' value='desc' name='price' onClick={(e) => setSort("desc")} />
                                 <label htmlFor="desc">Price (High to Low)</label>
                             </div>
                         </div>
+
                     </div>
                     <div className="right">
                         <div className="cat-img">
