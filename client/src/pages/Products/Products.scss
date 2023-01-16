@@ -1,5 +1,6 @@
 .products{
     display: flex;
+    flex-wrap: wrap;
     padding: 1rem;
     .left{
         flex: 1;
@@ -19,6 +20,7 @@
             .input-item{
                 font-size: small;
                 margin-bottom: 0.5rem;
+                display: flex;
 
                 label{
                     margin-left: 0.2rem;
@@ -29,5 +31,16 @@
 
     .right{
         flex: 3;
+
+        @media screen and (max-width:916.5px) {
+            .cat-img{
+                display: none;
+            }
+        }
+        @media screen and (min-width:1535.5px) {
+            .cat-img{
+                display: none;
+            }
+        }
     }
 }

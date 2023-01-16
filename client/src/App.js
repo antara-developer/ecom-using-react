@@ -4,7 +4,9 @@ import Navibar from "./components/Navbar/Navibar";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Products from "./pages/Products/Products";
+import CartPage from "./pages/CartPage/CartPage"
 import "./app.scss"
+
 
 const Layout = () => {
   return (
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/cartPage",
+        element: <CartPage />,
       },
       {
         path: "/products/:id",

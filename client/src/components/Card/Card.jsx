@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Star from '../Star/Star';
 import "./Card.scss";
 
 const Card = ({ item }) => {
@@ -18,6 +19,9 @@ const Card = ({ item }) => {
                 <div className="price">
                     <div className="old-price">${item.oldPrice || item?.attributes?.price + 20}</div>
                     <div className="new-price">${item?.attributes?.price}</div>
+                </div>
+                <div className="rating">
+                <span>{item?.attributes?.rating}</span> <Star stars={item?.attributes?.rating}/>
                 </div>
             </div>
         </Link>

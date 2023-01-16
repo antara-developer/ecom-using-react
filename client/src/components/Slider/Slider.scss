@@ -2,21 +2,25 @@
     .carousel{
         position: relative;
         .control-icons{
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
+            // color: black;
             .carousel-control-prev{
                 .leftIcon{
-                    position: absolute;
-                    left: 35rem;
-                    bottom: 0.5rem;
-                    
+                    // position: absolute;
+                    // left: 35rem;
+                     // bottom: 0.5rem;
+                    margin-right: 5rem;
+                    color:black;
                 }
             }
             .carousel-control-next{
                 .rightIcon{
-                    position: absolute;
-                    right: 35rem;
-                    bottom: 0.5rem;
+                    // position: absolute;
+                    // right: 35rem;
+                    // bottom: 0.5rem;
+                    margin-left: 5rem;
+                    color:black;
                 }
             }
         }

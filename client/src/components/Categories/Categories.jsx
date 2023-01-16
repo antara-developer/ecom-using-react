@@ -7,7 +7,6 @@ const Categories = () => {
         <div className='categories-container'>
             <div className="top">
                 <h3>Categories</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, similique officia. Velit repudiandae pariatur inventore odio beatae reiciendis est ipsa quasi quas, illo, temporibus laboriosam quod corrupti ullam dicta aliquam.</p>
             </div>
             <div className="categories">
                 <div className="column">
@@ -27,7 +26,7 @@ const Categories = () => {
                 <div className="column">
                     <div className="rows">
                         <img src="https://images.pexels.com/photos/1996969/pexels-photo-1996969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-                        <Link className="link" to='/products/3'>
+                        <Link className="link" to='/products/7'>
                             <button>Sale</button>
                         </Link>
                     </div>
@@ -36,7 +35,7 @@ const Categories = () => {
                     <div className="rows">
                         <div className="column">
                             <div className="rows">
-                                <img src="https://images.pexels.com/photos/10581052/pexels-photo-10581052.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" />
+                                <img src="https://images.pexels.com/photos/5325561/pexels-photo-5325561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
                                 <Link className="link" to='/products/4'>
                                     <button>Featured</button>
                                 </Link>
@@ -44,7 +43,7 @@ const Categories = () => {
                         </div>
                         <div className="column">
                             <div className="rows">
-                                <img src="https://images.pexels.com/photos/3689148/pexels-photo-3689148.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" />
+                                <img src="https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
                                 <Link className="link" to='/products/5'>
                                     <button>Trending</button>
                                 </Link>

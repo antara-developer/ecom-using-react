@@ -12,7 +12,7 @@ const Products = () => {
     const [sort, setSort] = useState("");
     const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-    const { data, loading, error } = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
+    const { data, meta, loading, error } = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -24,7 +24,7 @@ const Products = () => {
                 : selectedSubCats.filter((item) => item !== value)
         );
     };
-
+    
     return (
         <div className='products'>
             {error ? "Something went wrong!" : loading ? "loading" :

@@ -12,7 +12,6 @@ const FeaturedProducts = ({ type }) => {
         <div className='featuredProducts'>
             <div className="top">
                 <h3>{type}</h3>
-                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, similique officia. Velit repudiandae pariatur inventore odio beatae reiciendis est ipsa quasi quas, illo, temporibus laboriosam quod corrupti ullam dicta aliquam.</p> */}
             </div>
             <div className="bottom">
                 {error
