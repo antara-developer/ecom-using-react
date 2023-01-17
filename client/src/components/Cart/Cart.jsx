@@ -1,9 +1,8 @@
 import React from 'react';
 import "./Cart.scss";
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import { reduceItem, removeItem, resetCart } from '../../redux/cartReducer';
+import { removeItem, resetCart } from '../../redux/cartReducer';
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -27,6 +26,7 @@ const Cart = () => {
                 <div className="copy">
                     <p>Hey this feels light! Let's add some items</p>
                     <Link className="link copy-button" to='/products/3'><button>Go to Products Page</button></Link>
+                    {/* <Button/> */}
                 </div>
             </div>
         )
@@ -37,17 +37,18 @@ const Cart = () => {
                 <h1 className='cart-desc'>Your cart</h1>
                 {products?.map(item => (
                     <div className="item" key={item.id}>
+                        <Link className="link desc-contain" to={`/product/${item.id}`}>
                         <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" />
                         <div className="details">
                             <h1>{item.title}</h1>
                             <p>{item.desc?.substring(0, 100)}</p>
                             <div className="price">{item.quantity} x ${item.price}</div>
-                        </div>
+                        </div></Link>
                         <div className="icons">
-                        <RemoveCircleIcon className='remove' onClick={() => dispatch(reduceItem({
+                        {/* <RemoveCircleIcon className='remove' onClick={() => dispatch(reduceItem({
                             id: item.id,
                             quantity: item.quantity
-                        }))} />
+                        }))} /> */}
                         <DeleteOutlineIcon className='delete' onClick={() => dispatch(removeItem(item.id))} />
                         </div>
                     </div>

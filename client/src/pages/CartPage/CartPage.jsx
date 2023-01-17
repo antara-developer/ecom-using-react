@@ -1,14 +1,14 @@
 import React from 'react';
 import "./CartPage.scss";
 import { useDispatch, useSelector } from "react-redux"
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
-import { reduceItem, removeItem, resetCart } from '../../redux/cartReducer';
+import { reduceItem, removeItem, resetCart,  addItem } from '../../redux/cartReducer';
 import { Link } from "react-router-dom";
-import { toggleButtonGroupClasses } from '@mui/material';
 
 const CartPage = () => {
 
@@ -36,6 +36,7 @@ const CartPage = () => {
         return (tot);
     }
     console.log(products.length)
+    console.log(products.quantity);
 
     if (products.length === 0) {
         return (
@@ -57,19 +58,27 @@ const CartPage = () => {
                     <div className="left col-md-6">
                         {products?.map(item => (
                             <div className="item" key={item.id}>
-                                <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" />
+                                <CloseIcon className="close-icon" onClick={() => dispatch(removeItem(item.id))}/>
+                                <Link className="link desc-contain" to={`/product/${item.id}`}><img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="" /></Link>
                                 <div className="for-flex">
-                                    <div className="details">
+                                <Link className="link desc-contain" to={`/product/${item.id}`}><div className="details">
                                         <h1>{item.title}</h1>
                                         <p>{item.desc?.substring(0, 100)}</p>
                                         <div className="price">{item.quantity} x ${item.price}</div>
-                                    </div>
+                                    </div></Link>
                                     <div className="icons">
-                                        <RemoveCircleIcon className='remove' onClick={() => dispatch(reduceItem({
+                                        {(item.quantity===1) ? <RemoveCircleIcon className='disabled' onClick={() => dispatch(reduceItem({
+                                            id: item.id,
+                                            quantity: item.quantity
+                                        }))} /> : <RemoveCircleIcon className='remove' onClick={() => dispatch(reduceItem({
+                                            id: item.id,
+                                            quantity: item.quantity
+                                        }))} />}
+                                        <AddCircleIcon className='add' onClick={() => dispatch(addItem({
                                             id: item.id,
                                             quantity: item.quantity
                                         }))} />
-                                        <DeleteOutlineIcon className='delete' onClick={() => dispatch(removeItem(item.id))} />
+                                        {/* <DeleteOutlineIcon className='delete' onClick={() => dispatch(removeItem(item.id))} /> */}
                                     </div>
                                 </div>
                             </div>

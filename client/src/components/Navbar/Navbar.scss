@@ -129,7 +129,7 @@
             }
         }
 
-        @media screen and (min-width: 956px) {
+        @media screen and (min-width: 956px) and (max-width: 990px){
 
             .container{
                 max-width: 900px !important;
@@ -151,7 +151,12 @@
 
                 .item {
                     margin: 0 1.5rem 0 0;
-                    color: white
+                    color: white;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
                 }
             }
 
@@ -199,6 +204,9 @@
             .cartItem {
                 p {
                     display: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
 
                 .cart-icon {
@@ -217,6 +225,9 @@
             p {
                 color: white;
                 margin-right: 0.5rem;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
 
             .cart-icon {
